@@ -1,0 +1,31 @@
+header {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    background: transparent;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 133px;
+    height: 133px;
+    flex: 0 1 20%;
+    background-color: red;
+}
+
+.menu_box {
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: space-between;
+
+}
