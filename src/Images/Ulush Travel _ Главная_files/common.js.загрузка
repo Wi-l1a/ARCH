@@ -1,0 +1,20 @@
+function el(selector) {
+    return document.querySelector(selector);
+}
+
+function els(selector) {
+    return document.querySelectorAll(selector);
+}
+
+function el_last(selector) {
+    let all_els = document.querySelectorAll(selector);
+    return all_els[all_els.length - 1];
+}
+
+function el_next(selector) {
+    return document.querySelector(selector).nextElementSibling;
+}
+
+function el_prev(selector) {
+    return document.querySelector(selector).previousElementSibling;
+}
