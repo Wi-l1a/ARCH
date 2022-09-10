@@ -1,0 +1,48 @@
+.bg {
+    background: url(./../../../../Images/Backgrounds/offerimg.jpg)center / cover no-repeat fixed;
+    box-shadow: inset 0px -70px 100px 40px #101010, inset 0px 70px 180px 40px #101010;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.general_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box_title {
+    flex: 0 1 80%;
+    text-align: center;
+}
+
+.box_title p {
+    user-select: none;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 25px;
+    margin-bottom: 5%;
+}
+
+@media(max-width:415px) {
+    .bg {
+        height: 80vh;
+    }
+
+    .general_box {
+        height: 80vh;
+    }
+
+    .box_title p {
+        font-size: 15px;
+    }
+}

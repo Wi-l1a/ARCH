@@ -1,0 +1,16 @@
+@media(min-width:415px) {
+    .NavBar_box {
+        display: none;
+    }
+}
+
+.mr_auto a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.mr_auto a:hover {
+    background: hsla(29, 84%, 58%, 0.482);
+}
