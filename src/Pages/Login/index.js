@@ -3,8 +3,8 @@ import styles from './Login.module.css'
 
 const Login = () => {
     return (
-        <div>
-
+        <div className={styles.bg}>
+            <div className={styles.card_form}></div>
         </div>
     );
 };

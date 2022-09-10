@@ -1,0 +1,73 @@
+.bg {
+    background: url(./../../../../Images/Backgrounds/visa-img.jpg)center / cover no-repeat fixed;
+    box-shadow: inset 0px 0px 100px 50px #101010, 0px 0px 100px 50px #101010;
+    height: 90vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.general_box {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 90vh;
+}
+
+.box_number1 {
+    flex: 0 1 50%;
+    max-width: 48%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.box_number1 img {
+    width: 150px;
+    height: 200px;
+}
+
+.number_title {
+    line-height: 1.5;
+    user-select: none;
+    margin: 0;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #f8f9fa;
+}
+
+.number_desc {
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+@media(max-width:415px) {
+    .general_box {
+        justify-content: start;
+    }
+
+    .box_number1 img {
+        width: 80px;
+        height: 100px;
+    }
+
+    .number_title {
+        font-size: 20px;
+    }
+
+    .number_desc {
+        font-size: 15px;
+    }
+
+    .box_number1 {
+        flex: 0 1 100%;
+        max-width: 100%;
+
+    }
+}

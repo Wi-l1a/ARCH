@@ -1,0 +1,25 @@
+.bg {
+    background: url(./../../../../Images/Backgrounds/bars2.jpg)center / cover no-repeat fixed;
+    box-shadow: inset 0px -70px 100px 40px #101010, inset 0px 70px 180px 40px black;
+    height: 100vh;
+    filter: brightness(70%);
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box_map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media(max-width:415px) {
+    .bg {
+        display: none;
+    }
+}

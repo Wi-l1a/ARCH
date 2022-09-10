@@ -1,0 +1,76 @@
+.bg {
+    background: url(./../../../../Images/Backgrounds/history-img.jpg)center / cover no-repeat fixed;
+    box-shadow: inset 0px -70px 100px 40px #101010, inset 0px 70px 180px 40px #101010;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.general_box {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.box_number3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 0 1 60%;
+}
+
+.wild_subitem {
+    flex: 0 1 90%;
+}
+
+.box_number3 img {
+    width: 200px;
+    height: 200px;
+}
+
+.number_title {
+    line-height: 1.5;
+    user-select: none;
+    margin: 0;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #f8f9fa;
+}
+
+.number_desc {
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+@media(max-width:415px) {
+    .bg {
+        height: 90vh;
+    }
+
+    .box_number3 img {
+        width: 30%;
+    }
+
+    .wild_subitem h2 {
+        font-size: 20px;
+    }
+
+    .wild_subitem p {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .box_number3 {
+        flex: 0 1 100%;
+    }
+}

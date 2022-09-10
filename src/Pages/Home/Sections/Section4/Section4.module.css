@@ -1,0 +1,156 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bg {
+    background: #121212;
+    box-shadow:
+        0px 100px 100px -10px black,
+        0px -100px 100px -10px black;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+.history_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.history_items {
+    flex: 0 1 33%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.history_item h3 {
+    font-weight: 900;
+    color: #feb500;
+    padding-bottom: 15px;
+    font-size: 16px;
+}
+
+.history_item p {
+    user-select: none;
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.box_number1 {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.box_number1 img {
+    position: absolute;
+    right: 95%;
+    width: 190px;
+    height: 150px;
+}
+
+.number_title {
+    line-height: 1.5;
+    user-select: none;
+    margin: 0;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #f8f9fa;
+}
+
+.number_desc {
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.wild_subitem h2 {
+    line-height: 1.5;
+    user-select: none;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #feb500;
+}
+
+.history_img {
+    width: 80%;
+}
+
+#history_img_positions {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.line_up {
+    filter: brightness(0) invert(1);
+    width: 40%;
+
+}
+
+.line_up2 {
+    position: absolute;
+    top: 100%;
+    width: 14%;
+    filter: brightness(0) invert(1);
+}
+
+
+
+@media(max-width:415px) {
+    .bg {
+        height: 80vh;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .line_up2,
+    .line_up {
+        display: none;
+    }
+
+    #history_img_positions {
+        justify-content: center;
+    }
+
+    .history_items {
+        flex: 0 1 50%;
+    }
+
+
+    .wild_subitem h2 {
+        font-size: 15px;
+    }
+
+    .wild_subitem p {
+        font-size: 12px;
+    }
+
+    .box_number1 img {
+        width: 50%;
+        height: 70px;
+    }
+
+    .box_number1 {
+        position: relative;
+        display: flex;
+    }
+
+    .history_item p {
+        font-size: 12px;
+    }
+}

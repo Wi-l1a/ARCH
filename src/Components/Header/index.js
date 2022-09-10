@@ -1,31 +1,34 @@
 import React from 'react';
 import styles from './Header.module.css'
-import { NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import logo from './../../Images/Backgrounds/logo.png'
+import BurgerMenu from './BurgerMenu/index';
 const Header = () => {
     return (
         <header>
+            <BurgerMenu />
             <div className={styles.container}>
                 <nav className={styles.navigation}>
-                    <div className={styles.logo}><NavLink to={'/'}><img src='' alt='logo' /></NavLink></div>
+                    <div className={styles.logo}>
+                        <Link to={'/'}><img src={logo} alt='logo' /></Link>
+                    </div>
                     <ul className={styles.menu_box}>
                         <li>
-                            <NavLink to="/tours">Туры</NavLink>
+                            <Link to="/tours">Туры</Link>
                         </li>
                         <li>
-                            <NavLink to="/aboutus">О нас</NavLink>
+                            <Link to="/aboutus">О нас</Link>
                         </li>
                         <li>
-                            <NavLink to="/otherservices">Другие услуги</NavLink>
+                            <Link to="/otherservices">Другие услуги</Link>
                         </li>
                         <li>
-                            <NavLink to="/contact">Контакты</NavLink>
+                            <Link to="/contact">Контакты</Link>
                         </li>
                         <li>
-                            <NavLink to="/registration">РЕГ</NavLink>/
-                            <NavLink to="/login">ЛОГ</NavLink>
+                            <Link to="/registration">Регистрация</Link>
+                            <Link to="/login">Вход</Link>
                         </li>
-
                     </ul>
                 </nav>
             </div>

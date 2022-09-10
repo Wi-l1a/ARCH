@@ -12,10 +12,11 @@ import Registration from './../../Pages/Registration/index';
 import Login from './../../Pages/Login/index';
 import Goodfood from '../../Pages/GoodFood';
 import Mycabinet from './../../Pages/MyCabinet/index';
+import TourSelection from './../../Pages/TourSelection/index';
 
 const Main = () => {
     return (
-        <>
+        <main>
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/detail/:id' element={<Detail />} />
@@ -30,8 +31,9 @@ const Main = () => {
                 <Route path='/goodfood' element={<Goodfood />} />
                 <Route path='/mycabinet' element={<Mycabinet />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/tourselection' element={<TourSelection />} />
             </Routes>
-        </>
+        </main>
     );
 };
 
