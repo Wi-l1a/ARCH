@@ -1,9 +1,4 @@
-header {
-    width: 100%;
-    position: absolute;
-    z-index: 0;
-    background: transparent;
-}
+header {}
 
 .container {
     width: 80%;

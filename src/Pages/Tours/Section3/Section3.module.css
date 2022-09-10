@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.new_tour h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    margin-top: 10%;
+    color: yellow;
+    font-size: 50px;
+    text-align: center;
+}
+
+.new_tour p {
+    font-family: 'Montserrat';
+
+    font-size: 24px;
+    color: white;
+    margin-top: 2%;
+    text-align: center;
+
+}
+
+.hourse h2 {
+    font-family: 'Montserrat';
+    color: rgba(255, 255, 255, 0.727);
+    font-size: 45px;
+    text-align: center;
+}
+
+.hourse img {
+    margin-top: 10%;
+    width: 100%;
+    height: 40vh;
+}
+
+.all_tour {
+    display: flex;
+}
+
+
+@media(max-width:415px) {
+    .container {
+        width: 100%;
+    }
+
+    .hourse img {
+        margin-top: 10%;
+        width: 100%;
+        height: 15vh;
+    }
+
+    .hourse h2 {
+        font-family: 'Montserrat';
+        color: rgba(255, 255, 255, 0.727);
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .all_tour {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new_tour h2 {
+        font-size: 30px;
+    }
+
+    .new_tour p {
+        font-size: 20px;
+    }
+
+
+}
