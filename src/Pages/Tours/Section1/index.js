@@ -9,7 +9,7 @@ const Section1 = () => {
             <div className={styles.bgr_tour}>
                 <div className={styles.container}>
                     <div className={styles.h1_tour}>
-                        <h1 className={styles.h1_font}>Погрузись в красоту Центральной Азии</h1>
+                        <h1 className={styles.h1_font}>Погрузись в красоту Центральной<br />Азии</h1>
                         <p>Открой для себя обогащающие природой и культурно тематические поездки под руководством профессионалов</p>
                     </div>
                     <div className={styles.tour_h2}>
