@@ -21,7 +21,7 @@
 .section2_h1 h1 {
     font-family: 'Montserrat';
 
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
     margin-top: 4%;
     color: yellow;
@@ -32,10 +32,11 @@
 .section2_h1 p {
     font-family: 'Montserrat';
 
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     margin-top: 4%;
     line-height: 35px;
+    text-align: center;
 }
 
 .section2_h1 img {
@@ -47,7 +48,8 @@
     font-family: 'Montserrat';
 
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+
     color: white;
     margin-top: 10%;
 }
