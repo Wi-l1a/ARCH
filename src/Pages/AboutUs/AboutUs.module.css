@@ -1,0 +1,82 @@
+.bg {
+    background: black;
+    position: relative;
+    z-index: 0;
+}
+
+.container {
+    padding-top: 10%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.blok_1 {
+    background: brown;
+}
+
+.aboutUs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.blok_1 h1 {
+    font-family: "Axiforma", sans-serif;
+    line-height: 1.5;
+    user-select: none;
+    margin: 0;
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+}
+
+.image_team img {
+    width: 100%;
+    height: 300px;
+}
+
+.text_about {
+    flex: 0 1 50%;
+}
+
+.text_about h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+}
+
+
+.text_about h2 {
+    margin-top: 10%;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+}
+
+@media(max-width: 415px) {
+    .container {
+        width: 100%;
+    }
+
+    .blok_1 h1 {
+        font-size: 5px;
+    }
+
+    .text_about h1 {
+        font-size: 20px;
+    }
+
+    .text_about h2 {
+        font-size: 15px;
+    }
+
+
+    .image_team img {
+        width: 200px;
+        height: 130px;
+    }
+}

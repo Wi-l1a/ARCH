@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.block {
+    margin-top: 20%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 50vh;
+}
+
+.block h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+}
+
+.block p {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-top: 15px;
+
+}
+
+.block_text {
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+
+}
+
+.block_text p {
+    margin-left: 5%;
+
+}
