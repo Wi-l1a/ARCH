@@ -1,0 +1,155 @@
+.bg {
+    background: #101010;
+
+    height: 120vh;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+.box_sports {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.sport_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 100%;
+    margin-top: 10%;
+}
+
+.box_item_sport {
+    flex: 0 1 60%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.box_item_sport img {
+    width: 150px;
+    height: 200px;
+}
+
+.number_title {
+    line-height: 1.5;
+    user-select: none;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #f8f9fa;
+}
+
+.number_desc {
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.wild_item {
+
+    flex: 0 1 30%;
+}
+
+.line1 {
+    position: absolute;
+    filter: brightness(0) invert(1);
+    top: 5%;
+    left: 50%;
+    width: 30%;
+}
+
+.line2 {
+    position: absolute;
+    filter: brightness(0) invert(1);
+    top: 63%;
+    width: 90%;
+
+}
+
+.line3 {
+    position: absolute;
+    filter: brightness(0) invert(1);
+    top: 100%;
+    left: 10%;
+    width: 20%;
+}
+
+.wild_item img {
+    width: 100%;
+}
+
+.wild_card_title {
+    flex: 0 1 22%;
+}
+
+.wild_card_title h2 {
+    font-family: "Axiforma", sans-serif;
+    font-weight: 900;
+    color: #feb500;
+    font-size: 16px;
+}
+
+.wild_card_title p {
+    user-select: none;
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+@media(max-width:415px) {
+    .container {
+        width: 100%;
+    }
+
+    .line1,
+    .line2,
+    .line3,
+    #sport_items_none {
+        display: none;
+    }
+
+    .box_item_sport {
+        flex: 0 1 100%;
+    }
+
+    .box_item_sport img {
+        width: 30%;
+    }
+
+    .sport_items {
+        display: block;
+    }
+
+    .wild_item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wild_item img {
+        width: 80%;
+    }
+
+    .number_title {
+        font-size: 20px;
+    }
+
+    .number_desc {
+        font-size: 14px;
+    }
+}

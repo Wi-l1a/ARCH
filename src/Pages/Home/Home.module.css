@@ -1,5 +1,11 @@
-.bg1 {
-    height: 100vh;
-    background: url(./../../Images/Backgrounds/Mount.jpg) no-repeat;
-    background-size: cover;
+
+.bg {
+    position: relative;
+    z-index: 0;
+}
+
+@media(max-width:415px) {
+    .bg {
+        padding-top: 18%;
+    }
 }

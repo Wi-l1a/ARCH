@@ -1,0 +1,105 @@
+.bg_box {
+    height: 100vh;
+    -moz-box-shadow:
+        inset 0px 100px 100px -10px black,
+        inset 0px -100px 100px -10px black;
+    -webkit-box-shadow:
+        inset 0px 100px 100px -10px black,
+        inset 0px -100px 100px -10px black;
+    box-shadow:
+        inset 0px 100px 100px -10px black,
+        inset 0px -100px 100px -10px #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bg1 {
+    background: url(./../../../Images/Backgrounds/autumn.jpg) center / cover no-repeat fixed;
+
+}
+
+#bg2 {
+    background: url(./../../../Images/Backgrounds/1622302246_58-oir_mobi-p-priroda-kirgizstana-priroda-krasivo-foto-61.jpg) center / cover no-repeat fixed;
+
+}
+
+#bg3 {
+    background: url(./../../../Images/Backgrounds/osen.png) center / cover no-repeat fixed;
+
+}
+
+#bg4 {
+    background: url(./../../../Images/Backgrounds/zima.png) center / cover no-repeat fixed;
+
+}
+
+
+.box_number1 {
+    margin-left: 40%;
+    flex: 0 1 40%;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.box_number1 img {
+    width: 150px;
+    height: 200px;
+}
+
+.number_title {
+    line-height: 1.5;
+    user-select: none;
+    margin: 0;
+    font-family: "Axiforma", sans-serif;
+    font-weight: 700;
+    font-size: 43px;
+    color: #f8f9fa;
+}
+
+.number_desc {
+    font-weight: 400;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+@media(max-width:415px) {
+    .bg_box {
+        justify-content: start;
+        height: 80vh;
+    }
+
+    .box_number1 {
+        flex: 0 1 80%;
+        margin-left: 20%;
+    }
+
+    .box_number1 img {
+        width: 20%;
+    }
+
+    .wild_subitem h2 {
+        font-size: 20px;
+    }
+
+    .wild_subitem p {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .box_number3 {
+        flex: 0 1 100%;
+    }
+}

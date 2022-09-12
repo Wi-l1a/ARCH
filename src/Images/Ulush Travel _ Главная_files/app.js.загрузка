@@ -1,0 +1,382 @@
+//   contacts   form
+
+let contactform = el(".contact-form");
+if (contactform) {
+  contactform.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let data = new FormData(this);
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", location.origin + "/sendcontact/");
+    xhr.onload = function () {
+      console.log(this.responseText);
+      contactform.style.display = "none";
+      let info = el(".info-footer");
+      info.innerText = "Спасибо, ваша заявка принята!";
+    };
+    xhr.send(data);
+    if (contactform.closest(".showmodal")) {
+      contactform.closest(".showmodal").classList.remove("showmodal");
+    }
+  });
+}
+
+//    add days  admin  panel
+
+document.addEventListener("click", (e) => {
+  // e.preventDefault();
+  // console.log("" + e.target.dataset.target);
+  if (e.target.classList.contains("add-days__btn")) {
+    document
+      .querySelector("." + e.target.dataset.target)
+      .classList.add("show-days");
+  }
+  if (e.target.classList.contains("save-tour__btn")) {
+    document
+      .querySelector("." + e.target.dataset.target)
+      .classList.remove("show-days");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const routeWrap = el(".route-wrapper");
+  const programFix = el(".program-fixed");
+  const scrollItems = els(".img-item");
+
+  const scrollAnimation = () => {
+    let windowCenter = window.innerHeight / 2 + window.scrollY;
+    scrollItems.forEach((el) => {
+      let scrollOffset = el.offsetTop + el.offsetHeight / 2;
+      if (windowCenter >= scrollOffset) {
+        el.classList.add("animation-class");
+      } else {
+        el.classList.remove("animation-class");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", () => {
+    scrollAnimation();
+  });
+
+  const progFixed = () => {
+    let scrollTop = window.scrollY;
+    let routeCenter = routeWrap.offsetHeight / 2;
+
+    if (scrollTop >= routeCenter) {
+      programFix.classList.add("fixed");
+    } else {
+      programFix.classList.remove("fixed");
+    }
+  };
+
+  if (el(".about-company-wrapper")) {
+    let aboutcompany_wrapper = el(".about-company-wrapper");
+    let aboutcompany_wrapper_coords =
+      aboutcompany_wrapper.getBoundingClientRect();
+    let aboutcompany_nav = el(".about-company__nav");
+    let partners_div = el("#partners-company");
+    let partners_div_coords = partners_div.getBoundingClientRect();
+    console.log(partners_div_coords.bottom);
+
+    window.addEventListener("scroll", () => {
+      if (el(".about-company__nav")) {
+        if (window.scrollY >= partners_div_coords.top) {
+          aboutcompany_nav.style.visibility = "hidden";
+        } else {
+          aboutcompany_nav.style.visibility = "visible";
+        }
+      }
+    });
+
+    const aboutWrapper = el(".about-company__info");
+    let window_width = window.innerWidth;
+
+    window.addEventListener("scroll", () => {
+      if (el(".about-company-wrapper")) {
+        if (window_width > 480) {
+          if (window.scrollY >= aboutcompany_wrapper_coords.top) {
+            aboutcompany_nav.style.position = "fixed";
+            aboutWrapper.style.marginLeft = "18em";
+            aboutcompany_nav.style.left =
+              aboutcompany_wrapper_coords.left + "px";
+            aboutcompany_nav.style.width =
+              aboutcompany_wrapper_coords.width * 0.13 + "px";
+            aboutcompany_nav.style.top = "10vh";
+          } else {
+            aboutcompany_nav.style.position = "relative";
+            aboutcompany_nav.style.left = "0";
+            aboutcompany_nav.style.top = "0";
+            aboutWrapper.style.marginLeft = "0em";
+          }
+        }
+      }
+    });
+  }
+  scrollAnimation();
+  window.addEventListener("scroll", () => {
+    if (el(".route-wrapper")) {
+      progFixed();
+    }
+  });
+});
+
+//   function for change color of fixed nav about
+const aboutLinks = el(".about-company__subnav");
+
+let aboutLink;
+
+if (el(".about-link")) {
+  aboutLinks.addEventListener("click", (event) => {
+    let aboutLink = event.target.closest(".about-link");
+
+    if (!aboutLink) return;
+
+    if (!aboutLinks.contains(aboutLink)) return;
+
+    changeColorLink(aboutLink);
+  });
+
+  function changeColorLink(e) {
+    if (aboutLink) {
+      aboutLink.classList.remove("about-link-focus");
+    }
+    aboutLink = e;
+    aboutLink.classList.add("about-link-focus");
+  }
+}
+
+//    burger  menu
+let burger = document.getElementsByClassName("burger")[0];
+let show = document.getElementsByClassName("nav-item__right")[0];
+
+if (el(".burger")) {
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("show-menu");
+    show.classList.toggle("show");
+  });
+}
+
+//    tabs  filter  section
+
+let faqLabel = els(".faq-label");
+
+faqLabel.forEach(
+  (item) =>
+    (item.onclick = () => {
+      //selektuje Answer
+      item.nextElementSibling.classList.toggle("active");
+
+      let labelIcon = item.lastElementChild;
+      let icons = labelIcon.lastElementChild;
+      icons.classList.toggle("rotate");
+    })
+);
+
+//    atbs   about  us
+
+const tabs = els("[data-tab-target]");
+const tabContents = els("[data-tab-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = el(tab.dataset.tabTarget);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("active-link");
+    });
+    tabs.forEach((tab) => {
+      tab.classList.remove("active-link");
+    });
+    tab.classList.add("active-link");
+    target.classList.add("active-link");
+  });
+});
+
+//    audio  player
+
+const audio = el("audio");
+const container = el(".container-audio");
+const playButton = el(".play-button");
+const musicIcon = el(".music-icon");
+const musicOn = el(".music-on");
+let isPlaying = false;
+
+const toggleAudio = () => {
+  if (isPlaying) {
+    audio.pause();
+    isPlaying = false;
+    playButton.classList.remove("playing");
+    musicIcon.style.display = "block";
+    musicOn.style.display = "none";
+  } else {
+    audio.play();
+    isPlaying = true;
+    playButton.classList.add("playing");
+    musicIcon.style.display = "none";
+    musicOn.style.display = "block";
+  }
+};
+
+//    slydes  for  climat  section
+
+//    slide  main page
+
+let slideIndex = 1;
+
+if (el(".main")) {
+  showSlides(slideIndex);
+}
+
+function plus(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slidesMain = document.getElementsByClassName("main");
+  if (n > slidesMain.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slidesMain.length;
+  }
+  for (i = 0; i < slidesMain.length; i++) {
+    slidesMain[i].style.display = "none";
+  }
+  slidesMain[slideIndex - 1].style.display = "flex";
+}
+
+//   slide tour page
+
+//    slydes  for  climat  section
+
+let slides = els(".slide");
+let dots = els(".dot");
+let index = 0;
+
+function prevSlide(n) {
+  index += n;
+  changeSlide();
+}
+
+function nextSlide(n) {
+  index += n;
+  changeSlide();
+}
+
+if (el(".slide-tour")) {
+  changeSlide();
+}
+
+function changeSlide() {
+  if (index > slides.length - 1) index = 0;
+
+  if (index < 0) index = slides.length - 1;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+
+    dots[i].classList.remove("active");
+  }
+
+  slides[index].style.display = "block";
+  dots[index].classList.add("active");
+}
+
+//     pop up for  map
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (el(".js-overlay-modal")) {
+    /* Записываем в переменные массив элементов-кнопок и подложку.
+		Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+    var modalButtons = els(".js-open-modal"),
+      overlay = el(".js-overlay-modal"),
+      closeButtons = els(".js-modal-close");
+
+    /* Перебираем массив кнопок */
+    modalButtons.forEach(function (item) {
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener("click", function (e) {
+        /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+			люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+			Нужно подстраховаться. */
+        e.preventDefault();
+
+        /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+			и будем искать модальное окно с таким же атрибутом. */
+        var modalId = this.getAttribute("data-modal"),
+          modalElem = el('.modal[data-modal="' + modalId + '"]');
+
+        /* После того как нашли нужное модальное окно, добавим классы
+			подложке и окну чтобы показать их. */
+        modalElem.classList.add("showmodal");
+        overlay.classList.add("showmodal");
+      });
+    });
+
+    closeButtons.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        var parentModal = this.closest(".modal");
+
+        parentModal.classList.remove("showmodal");
+        overlay.classList.remove("showmodal");
+      });
+    });
+
+    overlay.addEventListener("click", function () {
+      el(".modal.showmodal").classList.remove("showmodal");
+      overlay.classList.remove("showmodal");
+    });
+
+    document.onkeydown = function (evt) {
+      if (evt.key == "Escape" || evt.key == "Esc" || evt.key == 27) {
+        evt.preventDefault();
+        el(".modal.showmodal").classList.remove("showmodal");
+        overlay.classList.remove("showmodal");
+      }
+    };
+  }
+
+  //  modal for gallery image
+
+  if (document.querySelector(".modal-gallery-img")) {
+    let galImg = el(".modal-gallery-img");
+    let closeGall = el(".modal-gallery-close");
+    let overlayGall = el(".modal-gallery-overlay");
+
+    document.onclick = function (e) {
+      if (e.target.classList.contains("img-gall")) {
+        galImg.classList.add("showmodal");
+        overlayGall.classList.add("showmodal");
+        let imgItemSrc = e.target.src;
+        let imgItemGall = el(".img-gallery-item");
+        let imgItemGallSrc = el(".img-gallery-item").src;
+        imgItemGall.src = imgItemSrc;
+      }
+    };
+
+    closeGall.addEventListener("click", () => {
+      galImg.classList.remove("showmodal");
+      overlayGall.classList.remove("showmodal");
+    });
+
+    overlayGall.addEventListener("click", () => {
+      el(".modal-gallery-img.showmodal").classList.remove("showmodal");
+      overlayGall.classList.remove("showmodal");
+    });
+    //   esc press
+
+    if (document.querySelector(".modal-gallery-img")) {
+      document.onkeydown = function (ev) {
+        if (ev.key == "Escape" || ev.key == "Esc" || ev.key == 27) {
+          el(".modal-gallery-img.showmodal").classList.remove("showmodal");
+          overlayGall.classList.remove("showmodal");
+        }
+      };
+    }
+  }
+});
