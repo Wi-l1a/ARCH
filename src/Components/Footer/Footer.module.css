@@ -29,17 +29,22 @@
 }
 
 .h2_footer {
+    flex: 0 1 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.h2_footer a {
+    text-decoration: none;
     font-family: 'Montserrat';
     font-size: 20px;
     color: white;
-    margin-top: 10%;
-}
-
-.h2_footer p {
-    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .insta {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +71,7 @@
         font-size: 20px;
     }
 
-    .h2_footer p {
+    .h2_footer a {
         margin-top: 0;
     }
 
