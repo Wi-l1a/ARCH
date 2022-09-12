@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Section1.module.css'
+import { Link } from 'react-router-dom';
 
 
 const Section1 = () => {
@@ -36,7 +37,7 @@ const Section1 = () => {
 
                         </select>
 
-                        <button className={styles.btn_sel}>Отправить</button>
+                        <Link to={'/tourselection'}><button className={styles.btn_sel}>Отправить</button></Link>
 
                     </div>
                 </div>
