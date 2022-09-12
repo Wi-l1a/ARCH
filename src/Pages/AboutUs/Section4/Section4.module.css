@@ -1,0 +1,40 @@
+.container {
+    width: 80%;
+    /* background-color: blueviolet; */
+    margin-top: 10%;
+}
+
+.text h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+
+
+}
+
+.paragraf p {
+    color: aliceblue;
+    margin-top: 17%;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    line-height: 1.5;
+
+}
+
+@media(max-width: 415px) {
+    .container {
+        width: 100%;
+    }
+
+    .text h1 {
+        font-size: 22px;
+    }
+
+    .paragraf p {
+        font-size: 15px;
+        width: 52%;
+    }
+
+}

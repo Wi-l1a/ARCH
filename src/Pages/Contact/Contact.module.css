@@ -1,6 +1,75 @@
-.div {
-    position: absolute;
-    z-index: -1;
+.bg {
+    background: black;
+    position: relative;
+    z-index: 0;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.container h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts h2 {
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.block1 {
+    flex: 0 1 40%;
+}
+
+.block1 img {
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 30%;
+    margin-top: 5%;
+}
+
+.input {
     width: 100%;
-    height: 100vh;
+    height: 50%;
+}
+
+.input input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #f8f9fa;
+    padding: 15px 0px 15px 10px;
+    width: 100%;
+}
+
+.btn button {
+    background: #feb500;
+    border-radius: 5px;
+    padding: 15px 151px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    text-align: center;
 }

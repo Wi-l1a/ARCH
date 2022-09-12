@@ -1,0 +1,46 @@
+.our_job {
+    align-items: center;
+    margin-top: 10%;
+}
+
+
+.our_job h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+
+}
+
+.our_job p {
+    padding-top: 20px;
+    width: 80%;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Axiforma", sans-serif;
+    color: #f8f9fa;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.image {
+    margin-top: 10%;
+}
+
+@media(max-width: 415px) {
+    .container {
+        width: 100%;
+    }
+
+    .our_job h1 {
+        font-size: 25px;
+    }
+
+    .our_job p {
+        font-size: 20px;
+        width: 50%;
+    }
+
+    .image img {
+        width: 50%;
+    }
+}

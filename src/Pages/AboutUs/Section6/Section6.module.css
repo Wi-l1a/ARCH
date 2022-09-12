@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #feb500;
+    margin: 5% 0;
+}
+
+.images {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.images img {
+    width: 200px;
+    height: 149px;
+    border-radius: 90%;
+}
+
+.image {
+    animation: image 4s linear infinite alternate;
+}
+
+@keyframes image {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
