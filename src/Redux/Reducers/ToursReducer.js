@@ -3,10 +3,12 @@ import { ToursAPI } from '../../API/index';
 
 const initialState = {
     isLoading: false,
-    toursArr: []
+    toursArr: [],
+    contactsArr: []
 }
 const SET_TOURS_ARR = 'SET_TOURS_ARR'
 const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING'
+const SET_CONTACTS_ARR = 'SET_CONTACTS_ARR'
 
 
 const ToursReducers = (state = initialState, action) => {
@@ -21,6 +23,11 @@ const ToursReducers = (state = initialState, action) => {
                 ...state,
                 toursArr: action.toursArr
             }
+        case SET_CONTACTS_ARR:
+            return {
+                ...state,
+                contactsArr: action.contactsArr
+            }
 
         default:
             return state
@@ -31,11 +38,20 @@ const ToursReducers = (state = initialState, action) => {
 
 const setToursArr = (toursArr) => ({ type: SET_TOURS_ARR, toursArr })
 const toggleIsLoading = (isLoading) => ({ type: TOGGLE_IS_LOADING, isLoading })
+const setContactsArr = (contactsArr) => ({ type: SET_CONTACTS_ARR, contactsArr })
+
 
 export const getAllTour = () => (dispatch) => {
     dispatch(toggleIsLoading(true))
     ToursAPI.getAllTours()
         .then(data => console.log(data))
+        .catch(err => console.error(err))
+        .finally(() => dispatch(toggleIsLoading(false)))
+}
+export const getAllContacts = () => (dispatch) => {
+    dispatch(toggleIsLoading(true))
+    ToursAPI.getAllTours()
+        .then(data => dispatch(setContactsArr(data)))
         .catch(err => console.error(err))
         .finally(() => dispatch(toggleIsLoading(false)))
 }

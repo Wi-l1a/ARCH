@@ -14,11 +14,11 @@ const Section2 = () => {
             <div className={styles.container}>
                 <div className={styles.nav}>
                     <div className={styles.box_menu} >
-                        <Link to={'/'}>Новости компании</Link>
-                        <Link to={'/'}>Наша миссия и ценности</Link>
-                        <Link to={'/'}>Политика устойчивого развития</Link>
-                        <Link to={'/'}>Команда</Link>
-                        <Link to={'/'}>Наши партнеры</Link>
+                        <Link to={'#'}>Новости компании</Link>
+                        <Link to={'#'}>Наша миссия и ценности</Link>
+                        <Link to={'#'}>Политика устойчивого развития</Link>
+                        <Link to={'#'}>Команда</Link>
+                        <Link to={'#'}>Наши партнеры</Link>
                     </div>
                 </div>
                 <div className={styles.nav_text}>
