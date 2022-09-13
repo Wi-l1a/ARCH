@@ -48,7 +48,7 @@ const Header = () => {
                             <Link to="/aboutus">О нас</Link>
                         </li>
                         <li>
-                            <Link to="/otherservices">Другие услуги</Link>
+                            <Link to="/tourselection">Подбор Тура</Link>
                         </li>
                         <li>
                             <Link to="/contact">Контакты</Link>

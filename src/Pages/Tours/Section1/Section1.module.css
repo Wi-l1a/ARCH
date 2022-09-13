@@ -31,6 +31,12 @@
 
 }
 
+.box_btn {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
 .h1_tour {
     display: flex;
     justify-content: center;
@@ -50,7 +56,7 @@
     font-weight: 700;
     font-family: 'Montserrat';
     font-size: 24px;
-    color: yellow;
+    color: #feb500;
     padding-top: 8%;
     text-align: center;
 
@@ -69,9 +75,7 @@
 
 }
 
-.btn_sel {
-    margin-left: 10%;
-}
+.btn_sel {}
 
 @media(max-width:415px) {
     .container {

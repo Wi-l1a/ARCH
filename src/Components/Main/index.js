@@ -27,8 +27,7 @@ const Main = () => {
                 <Route path='/tours' element={<Tours />} />
                 <Route path='/aboutus' element={<Aboutus />} />
                 <Route path='/otherservices' element={<Otherservices />} />
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/transport' element={<Transport />} />
+                <Route path='/transport/' element={<Transport />} />
                 <Route path='/hotels' element={<Hotels />} />
                 <Route path='/registration' element={<Registration />} />
                 <Route path='/login' element={<Login />} />
