@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.box_transport {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg_transport {
+    background: #101010;
+    height: 90vh;
+}
+
+.card_transport {
+    flex: 0 1 30%;
+    margin-top: 20%;
+}
+
+.transport_name {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    color: #feb500;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.transport_price {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.transport_place {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat';
+
+}

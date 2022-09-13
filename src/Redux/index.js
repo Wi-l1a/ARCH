@@ -1,6 +1,8 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";
 import ToursReducers from "./Reducers/ToursReducer";
+
+
 const rootReducer = combineReducers({
     tours: ToursReducers
 })
