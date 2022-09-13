@@ -10,7 +10,7 @@ const instanse = axios.create({
 })
 
 export const ToursAPI = {
-    getAllTours() {
+    getAllContact() {
         return instanse.get("main/contact//").then(response => response.data)
     }
 }

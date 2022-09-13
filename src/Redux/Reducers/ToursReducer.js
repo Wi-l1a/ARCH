@@ -40,17 +40,9 @@ const setToursArr = (toursArr) => ({ type: SET_TOURS_ARR, toursArr })
 const toggleIsLoading = (isLoading) => ({ type: TOGGLE_IS_LOADING, isLoading })
 const setContactsArr = (contactsArr) => ({ type: SET_CONTACTS_ARR, contactsArr })
 
-
-export const getAllTour = () => (dispatch) => {
-    dispatch(toggleIsLoading(true))
-    ToursAPI.getAllTours()
-        .then(data => console.log(data))
-        .catch(err => console.error(err))
-        .finally(() => dispatch(toggleIsLoading(false)))
-}
 export const getAllContacts = () => (dispatch) => {
     dispatch(toggleIsLoading(true))
-    ToursAPI.getAllTours()
+    ToursAPI.getAllContact()
         .then(data => dispatch(setContactsArr(data)))
         .catch(err => console.error(err))
         .finally(() => dispatch(toggleIsLoading(false)))
