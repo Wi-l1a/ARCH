@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+
+
+
+.bg {
+    background: url(./../../../../../Images/Backgrounds/hotel.jpg) center / cover no-repeat;
+    height: 100vh;
+
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100vh;
+}
+
+.title_box h2 {
+    font-weight: 700;
+    font-family: 'Montserrat';
+    font-size: 85px;
+    color: #feb500;
+}
