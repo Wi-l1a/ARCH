@@ -72,4 +72,35 @@
     font-weight: 500;
     border: none;
     text-align: center;
+    color: white;
+}
+
+.container_contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.card {
+    flex: 0 1 33%;
+    display: flex;
+    margin-top: 20px;
+    border: 5px solid #feb500;
+    align-items: center;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.name h2 {
+    color: #feb500;
+    font-size: 25px;
+}
+
+
+.name h3 {
+    color: darkcyan;
+    font-size: 20px;
 }
