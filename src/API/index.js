@@ -9,8 +9,12 @@ const instanse = axios.create({
 })
 
 export const ToursAPI = {
+
+    getAllContact() {
+        return instanse.get("main/contact//").then(response => response.data)
+
     getAllTours() {
-        return instanse.get('main/contact//').then(response => response.data)
+        return instanse.get('main/location///').then(response => response.data)
     },
     signUP(userData) {
         return instanse.post('auth/users/', userData).then(response => response.data)
@@ -22,9 +26,6 @@ export const ToursAPI = {
         const header = { 'Authorization': `Bearer ${token}` }
         return instanse.get('auth/users/me/', { headers: header }).then(res => res.data)
     }
-
-        return instanse.get("main/location//").then(response => response.data)
-    },
     getDetailById(id) {
         return instanse.get('main/location//' + id + '/').then(response => response.data)
     },

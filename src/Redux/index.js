@@ -6,6 +6,7 @@ import userReducer from './Reducers/UsersReducers';
 const rootReducer = combineReducers({
     tours: ToursReducers,
     users: userReducer,
+
 })
 
 
