@@ -9,22 +9,25 @@ import Otherservices from './../../Pages/OtherServices/index';
 import Transport from './../../Pages/OtherServices/Transport/index';
 import Hotels from './../../Pages/OtherServices/Hotels/index';
 import Registration from './../../Pages/Registration/index';
-import Login from './../../Pages/Login/index';
+import Login from '../../Pages/Login/index';
 import Goodfood from '../../Pages/GoodFood';
 import Mycabinet from './../../Pages/MyCabinet/index';
 import TourSelection from './../../Pages/TourSelection/index';
 
+import { getLSToken } from '../../localStorage';
+
 const Main = () => {
+    const lsToken = getLSToken()
+
     return (
         <main>
-            <Routes>
+            < Routes >
                 <Route path='/' element={<Home />} />
                 <Route path='/detail/:id' element={<Detail />} />
                 <Route path='/tours' element={<Tours />} />
                 <Route path='/aboutus' element={<Aboutus />} />
                 <Route path='/otherservices' element={<Otherservices />} />
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/transport' element={<Transport />} />
+                <Route path='/transport/' element={<Transport />} />
                 <Route path='/hotels' element={<Hotels />} />
                 <Route path='/registration' element={<Registration />} />
                 <Route path='/login' element={<Login />} />
@@ -32,7 +35,7 @@ const Main = () => {
                 <Route path='/mycabinet' element={<Mycabinet />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/tourselection' element={<TourSelection />} />
-            </Routes>
+            </ Routes>
         </main>
     );
 };

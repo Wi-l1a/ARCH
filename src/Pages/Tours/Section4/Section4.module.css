@@ -18,7 +18,7 @@
 .new_tour h2 {
     font-weight: 700;
     margin-top: 10%;
-    color: yellow;
+    color: #feb500;
     font-size: 35px;
     text-align: center;
     font-family: 'Montserrat';
@@ -47,7 +47,7 @@
 
 .img_all img:hover {
     border-radius: 10px 100px / 120px;
-    box-shadow: 20px 15px 35px yellow;
+    box-shadow: 20px 15px 35px #feb500;
 }
 
 .your_img img {
