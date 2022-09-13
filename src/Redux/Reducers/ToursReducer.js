@@ -5,14 +5,15 @@ const initialState = {
     isLoading: false,
     toursArr: [],
     Detailtours: {},
-    hotelArr: []
+    hotelArr: [],
+    contactsArr: [],
 
 }
 const SET_TOURS_ARR = 'SET_TOURS_ARR'
 const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING'
 const SET_DETAIL_TOUR = 'SET_DETAIL_TOUR'
 const SET_HOTEL_ARR = 'SET_HOTEL_ARR'
-
+const SET_CONTACTS_ARR = 'SET_CONTACTS_ARR'
 
 const ToursReducers = (state = initialState, action) => {
     switch (action.type) {
@@ -36,7 +37,11 @@ const ToursReducers = (state = initialState, action) => {
                 ...state,
                 hotelArr: action.hotelArr
             }
-
+        case SET_CONTACTS_ARR:
+            return {
+                ...state,
+                contactsArr: action.contactsArr
+            }
         default:
             return state
 
@@ -48,6 +53,7 @@ const setToursArr = (toursArr) => ({ type: SET_TOURS_ARR, toursArr })
 const setHotel = (hotelArr) => ({ type: SET_HOTEL_ARR, hotelArr })
 const setDetailTour = (Detailtours) => ({ type: SET_DETAIL_TOUR, Detailtours })
 const toggleIsLoading = (isLoading) => ({ type: TOGGLE_IS_LOADING, isLoading })
+const setContactsArr = (contactsArr) => ({ type: SET_CONTACTS_ARR, contactsArr })
 
 export const getAllTour = () => (dispatch) => {
     dispatch(toggleIsLoading(true))
@@ -82,7 +88,13 @@ export const getHotelArr = () => (dispatch) => {
         .finally(() => dispatch(toggleIsLoading(false)))
 }
 
-
+export const getAllContacts = () => (dispatch) => {
+    dispatch(toggleIsLoading(true))
+    ToursAPI.getAllContact()
+        .then(data => dispatch(setContactsArr(data)))
+        .catch(err => console.error(err))
+        .finally(() => dispatch(toggleIsLoading(false)))
+}
 
 
 
