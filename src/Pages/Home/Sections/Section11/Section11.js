@@ -1,6 +1,16 @@
 import React from 'react';
 import styles from './Section11.module.css'
+import { Link } from 'react-router-dom';
 const Section11 = () => {
+
+    const ScrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    }
+
     return (
         <section >
             <div className={styles.bg}>
@@ -12,7 +22,7 @@ const Section11 = () => {
                                 Первозданная природа и богатая культура Кыргызстана не оставит Вас
 
                                 равнодушным и Вы захотите возвращаться сюда снова и снова</p>
-                            <button>Посетить Кыргызстан</button>
+                            <Link to='/tours'><button onClick={ScrollUp}>Посетить Кыргызстан!</button></Link>
                         </div>
 
                     </div>

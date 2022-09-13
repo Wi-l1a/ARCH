@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Header.module.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from './../../Images/Backgrounds/logo.png'
 import BurgerMenu from './BurgerMenu/index';
+import { getLSToken, getLSUser, removeLSToken } from './../../localStorage/index';
+import { useDispatch } from 'react-redux';
+import { removeToken } from '../../Redux/Reducers/UsersReducers';
+
+import LoginIcon from '@mui/icons-material/Login';
+import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
+import { removeUserName } from './../../Redux/Reducers/UsersReducers';
+
+
 const Header = () => {
+
+    const lsToken = getLSToken()
+    const lsName = getLSUser()
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const logOut = () => {
+        removeLSToken()
+        dispatch(removeToken())
+        dispatch(removeUserName())
+    }
+
+    // useEffect(() => {
+    //     if (!lsToken) {
+    //         navigate('/')
+    //     }
+    // }, [lsToken])
+
+
     return (
         <header>
             <BurgerMenu />
@@ -25,10 +53,24 @@ const Header = () => {
                         <li>
                             <Link to="/contact">Контакты</Link>
                         </li>
-                        <li>
-                            <Link to="/registration">Регистрация</Link>
-                            <Link to="/login">Вход</Link>
-                        </li>
+                        {
+                            lsToken && lsName
+                                ?
+                                <>
+                                    <li>
+                                        <Link to='/'>{lsName}</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={styles.btn} onClick={logOut} to='/login' ><AccessibleForwardIcon /> Выход</Link>
+
+                                    </li>
+                                </>
+                                :
+                                <li>
+                                    <Link to="/registration">Регистрация</Link>
+                                    <Link to="/login">Вход</Link>
+                                </li>
+                        }
                     </ul>
                 </nav>
             </div>
