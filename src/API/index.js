@@ -2,7 +2,7 @@ import * as axios from "axios";
 
 
 const instanse = axios.create({
-    baseURL: "https://touristbish.herokuapp.com/",
+    baseURL: "",
     headers: {
         'Content-Type': 'application/json',
     }
